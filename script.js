@@ -21,7 +21,7 @@ function changeColours() {
    +")";
 }
 
-function changeDirection() {
+function horizontal() {
   body.style.background =
     "linear-gradient( "
      + color1.value
@@ -31,12 +31,31 @@ function changeDirection() {
 }
 
 
+function diagonal() {
+  body.style.background =
+    "linear-gradient(to bottom right, "
+     + color1.value
+     + ", "
+     + color2.value
+     +")";
+}
+
+function vertical() {
+  console.log("hello")
+  body.style.background =
+    "linear-gradient(to right, "
+     + color1.value
+     + ", "
+     + color2.value
+     +")";
+}
+
 color1.addEventListener("input", changeColours);
 
 color2.addEventListener("input", changeColours);
 
-diagonalBtn.addEventListener("click", changeDirection);
+diagonalBtn.addEventListener("click", diagonal);
 
-horizontalBtn.addEventListener("click", changeDirection);
+horizontalBtn.addEventListener("click", horizontal);
 
-verticalBtn.addEventListener("click", changeDirection);
+verticalBtn.addEventListener("click", vertical);
