@@ -21,7 +21,22 @@ function changeColours() {
    +")";
 }
 
+function changeDirection() {
+  body.style.background =
+    "linear-gradient( "
+     + color1.value
+     + ", "
+     + color2.value
+     +")";
+}
+
 
 color1.addEventListener("input", changeColours);
 
 color2.addEventListener("input", changeColours);
+
+diagonalBtn.addEventListener("click", changeDirection);
+
+horizontalBtn.addEventListener("click", changeDirection);
+
+verticalBtn.addEventListener("click", changeDirection);
