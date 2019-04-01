@@ -6,6 +6,7 @@ var body = document.getElementById("gradient");
 var diagonalBtn = document.getElementById("diagonalBtn");
 var horizontalBtn = document.getElementById("horizontalBtn");
 var verticalBtn = document.getElementById("verticalBtn");
+var randombutton = document.getElementById("randombutton");
 
 random();
 
@@ -45,7 +46,6 @@ function vertical() {
      +")";
 }
 
-
 function random(){
   color1.value = getRandomColor();
   color2.value = getRandomColor();
@@ -70,3 +70,5 @@ diagonalBtn.addEventListener("click", diagonal);
 horizontalBtn.addEventListener("click", horizontal);
 
 verticalBtn.addEventListener("click", vertical);
+
+randombutton.addEventListener("click", random);
