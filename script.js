@@ -7,10 +7,7 @@ var diagonalBtn = document.getElementById("diagonalBtn");
 var horizontalBtn = document.getElementById("horizontalBtn");
 var verticalBtn = document.getElementById("verticalBtn");
 
-//var direction =
-// when i click a button
-// change direction variable value e.g. to 'to bottom right'
-// fire event listener functions again
+random();
 
 function changeColours() {
   body.style.background =
@@ -30,7 +27,6 @@ function horizontal() {
      +")";
 }
 
-
 function diagonal() {
   body.style.background =
     "linear-gradient(to bottom right, "
@@ -41,13 +37,28 @@ function diagonal() {
 }
 
 function vertical() {
-  console.log("hello")
   body.style.background =
     "linear-gradient(to right, "
      + color1.value
      + ", "
      + color2.value
      +")";
+}
+
+
+function random(){
+  color1.value = getRandomColor();
+  color2.value = getRandomColor();
+  changeColours();
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 color1.addEventListener("input", changeColours);
